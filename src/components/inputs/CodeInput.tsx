@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 
 type OTPInputProps = {
   length?: number;
@@ -64,7 +64,9 @@ export function OTPInput({
         {Array.from({ length }).map((_, index) => (
           <input
             key={index}
-            ref={(el) => (inputRefs.current[index] = el!)}
+            ref={(el) => {
+              inputRefs.current[index] = el!;
+            }}
             type="text"
             inputMode="numeric"
             autoComplete="one-time-code"

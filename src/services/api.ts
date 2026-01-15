@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3003", // Ajuste para a porta do seu backend
+  baseURL: "https://authapi.vicentedeveloper.com.br", // Ajuste para a porta do seu backend
 });
 
 // Interceptor para adicionar o Token em todas as requisições
